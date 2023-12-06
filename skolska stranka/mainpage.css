@@ -54,7 +54,8 @@ body::-webkit-scrollbar-thumb:hover{
 .nav-item:last-child{
     margin-top: 22rem;
     margin-left: 0rem;
-    align-items: center;
+    text-align: center;
+    max-width: min-content;
 }
 
 .nav-link{
