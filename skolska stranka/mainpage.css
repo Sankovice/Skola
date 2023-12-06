@@ -3,43 +3,58 @@
     font-family: "Concert One";
     --text-primary: #131316;
     --text-secondary: #343232;
+    --bg-primary: #343232;
+    --bg-secondary: #ffffff;
 }
 
-body{
-    color: black;
-    background-color: white;
-    margin: 0;
-    padding: 0;
+body::-webkit-scrollbar{
+    width: 0.75rem;
 }
 
-h1{
-    color: var(--text-primary);
+body::-webkit-scrollbar-track{
+    background: white;
 }
 
-p{
-    color: var(--text-secondary);
+body::-webkit-scrollbar-thumb{
+    background: #8a8888;
+    border: 1;
+    border-radius: 10px;
+    border-right: 2px white solid;
+    border-left: 2px white solid;
+    background-clip: padding-box;
 }
 
-main{
-    margin-top: 5rem;
-    padding: 1rem
+body::-webkit-scrollbar-thumb:hover{
+    background: #525050;
 }
 
 .navbar{
     background-color: #B9CEF3;
-    width: 100%;
-    height: 5rem;
+    width: 6rem;
+    height: 100vh;
     position: fixed;
-    margin-top: -5rem;
+    transition: 200ms ease;
 }
 
 .navigation{
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    position: absolute;
+    height: 100%;
+}
+
+.nav-item{
+    width: 100%;
+    margin-left: 4rem;
+}
+
+.nav-item:last-child{
+    margin-top: 22rem;
+    margin-left: 0rem;
+    align-items: center;
 }
 
 .nav-link{
@@ -47,15 +62,51 @@ main{
     align-items: center;
     height: 5rem;
     text-decoration: none;
-    color: var(--text-primary)
+    color: var(--text-primary);
+}
+
+i{
+    color: rgb(32, 32, 32);
 }
 
 .nav-link-text{
     display: none;
 }
 
-i{
-    margin: 2rem;
-    color: rgb(32, 32, 32);
-    width: 2rem;
+#nazov-hubenky{
+    font-family:  Beau Rivage;
+    font-size: 1.60rem;
+    margin: 0.10rem;
+}
+
+body{
+    color: black;
+    background-color: var(--bg-secondary);
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: var(--text-primary);
+    text-align: center;
+}
+
+p{
+    color: var(--text-secondary);
+}
+
+main{
+    margin-left: 6rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+.navbar:hover{
+    width: 11rem;
+    align-items: left;
+}
+
+.navbar:hover .nav-link-text{
+    display: block;
+    align-items: center;
 }
