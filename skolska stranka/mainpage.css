@@ -4,7 +4,7 @@
     --text-primary: #131316;
     --text-secondary: #343232;
     --bg-primary: #343232;
-    --bg-secondary: #ffffff;
+    --bg-secondary: #a0a0a0;
 }
 
 body::-webkit-scrollbar{
@@ -52,10 +52,34 @@ body::-webkit-scrollbar-thumb:hover{
 }
 
 .nav-item:last-child{
-    margin-top: 22rem;
     margin-left: 0rem;
     text-align: center;
     max-width: min-content;
+    margin-top: auto;
+}
+
+#hlavna-stranka{
+    margin-left: 0.35rem;
+}
+
+#ziaci-a-rodicia{
+    margin-left: 0.25rem;
+}
+
+#o-skole{
+    margin-left: 1.60rem;
+}
+
+#projekty{
+    margin-left: 1.90rem;
+}
+
+#zelena-skola{
+    margin-left: 1rem;
+}
+
+#kontakt{
+    margin-left: 1.70rem;
 }
 
 .nav-link{
@@ -64,10 +88,17 @@ body::-webkit-scrollbar-thumb:hover{
     height: 5rem;
     text-decoration: none;
     color: var(--text-primary);
+    filter: grayscale(100%) opacity(0.6);
+    transition: 200ms;
+}
+
+.nav-link:hover{
+filter: grayscale(0%) opacity(1);
+color: rgb(37, 37, 37);
 }
 
 i{
-    color: rgb(32, 32, 32);
+    color: rgb(0, 0, 0);
 }
 
 .nav-link-text{
@@ -83,7 +114,7 @@ i{
 
 body{
     color: black;
-    background-color: var(--bg-secondary);
+    background-color: white;
     margin: 0;
     padding: 0;
 }
@@ -111,4 +142,5 @@ main{
 .navbar:hover .nav-link-text{
     display: block;
     align-items: center;
+    flex-shrink: 0;
 }
