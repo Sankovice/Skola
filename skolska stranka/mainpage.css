@@ -28,11 +28,77 @@ body::-webkit-scrollbar-thumb:hover{
     background: #525050;
 }
 
+.nadpis{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    background-color: whitesmoke;
+}
+
+.novinky-dole{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    background-color: #9ACCD5;
+}
+
+.novinky-hore{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    background-color: whitesmoke;
+}
+
+.vlna-1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(0deg);
+    fill: whitesmoke;
+    background-color: #9ACCD5;
+}
+
+.vlna-1 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 90px;
+}
+
+.vlna-2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    fill: whitesmoke;
+    background-color: #9ACCD5;
+}
+
+.vlna-2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 90px;
+}
 .navbar{
-    background-color: #B9CEF3;
+    background-color: #202231;
     width: 6rem;
     height: 100vh;
     position: fixed;
+    z-index: 2;
+    left: 0;
     transition: 200ms ease;
 }
 
@@ -87,23 +153,23 @@ body::-webkit-scrollbar-thumb:hover{
     align-items: center;
     height: 5rem;
     text-decoration: none;
-    color: var(--text-primary);
+    color: rgb(255, 255, 255);
     filter: grayscale(100%) opacity(0.6);
     transition: 200ms;
 }
 
 .nav-link:hover{
 filter: grayscale(0%) opacity(1);
-color: rgb(37, 37, 37);
+color: rgb(211, 211, 211);
 }
 
 i{
-    color: rgb(0, 0, 0);
+    color: rgb(214, 214, 214);
 }
 
 .nav-link-text{
     display: none;
-    color: var(--text-secondary);
+    color: rgb(214, 214, 214);
 }
 
 #nazov-hubenky{
@@ -121,22 +187,27 @@ body{
 
 h1{
     color: var(--text-primary);
+    font-size: xx-large;
     text-align: center;
+    padding: 1rem;
 }
 
 p{
     color: var(--text-secondary);
+    padding: 1rem;
 }
 
 main{
     margin-left: 6rem;
-    padding: 1rem;
+    padding: 0;
     text-align: left;
 }
 
 .navbar:hover{
     width: 11rem;
     align-items: left;
+    position: fixed;
+    left: 0;
 }
 
 .navbar:hover .nav-link-text{
