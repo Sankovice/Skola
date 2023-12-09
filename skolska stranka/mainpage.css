@@ -1,43 +1,41 @@
-:root{
+:root {
     font-size: 16px;
-    font-family: "Concert One";
+    font-family: "Josefin Sans";
     --text-primary: #131316;
     --text-secondary: #343232;
     --bg-primary: #343232;
     --bg-secondary: #a0a0a0;
 }
 
-body::-webkit-scrollbar{
-    width: 0.75rem;
+body::-webkit-scrollbar-track {
+    background: #202231;
 }
 
-body::-webkit-scrollbar-track{
-    background: white;
-}
-
-body::-webkit-scrollbar-thumb{
-    background: #8a8888;
+body::-webkit-scrollbar-thumb {
     border: 1;
     border-radius: 10px;
-    border-right: 2px white solid;
-    border-left: 2px white solid;
+    border-right: 2px #202231 solid;
+    border-left: 2px #202231 solid;
     background-clip: padding-box;
+    background: #b6b6b6;
+    -webkit-transition: 200ms;
+    -webkit-filter: grayscale(100%) opacity(0.6);
 }
 
-body::-webkit-scrollbar-thumb:hover{
-    background: #525050;
+body::-webkit-scrollbar-thumb:hover {
+    -webkit-filter: grayscale(0%) opacity(1);
+    background: #e8e8e8;
 }
 
-.nadpis{
+.nadpis {
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
     min-width: 400px;
-    background-color: whitesmoke;
 }
 
-.novinky-dole{
+.novinky-dole {
     position: relative;
     z-index: 1;
     display: flex;
@@ -46,7 +44,7 @@ body::-webkit-scrollbar-thumb:hover{
     background-color: #9ACCD5;
 }
 
-.novinky-hore{
+.novinky-hore {
     position: relative;
     z-index: 1;
     display: flex;
@@ -92,7 +90,8 @@ body::-webkit-scrollbar-thumb:hover{
     width: calc(100% + 1.3px);
     height: 90px;
 }
-.navbar{
+
+.navbar {
     background-color: #202231;
     width: 6rem;
     height: 100vh;
@@ -102,7 +101,7 @@ body::-webkit-scrollbar-thumb:hover{
     transition: 200ms ease;
 }
 
-.navigation{
+.navigation {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -112,44 +111,45 @@ body::-webkit-scrollbar-thumb:hover{
     height: 100%;
 }
 
-.nav-item{
+.nav-item {
     width: 100%;
     margin-left: 4rem;
 }
 
-.nav-item:last-child{
+.nav-item:last-child {
     margin-left: 0rem;
     text-align: center;
     max-width: min-content;
     margin-top: auto;
 }
 
-#hlavna-stranka{
-    margin-left: 0.35rem;
+#hlavna-stranka {
+    margin-left: 0.20rem;
 }
 
-#ziaci-a-rodicia{
+#ziaci-a-rodicia {
     margin-left: 0.25rem;
 }
 
-#o-skole{
+#o-skole {
     margin-left: 1.60rem;
 }
 
-#projekty{
+#projekty {
     margin-left: 1.90rem;
 }
 
-#zelena-skola{
+#zelena-skola {
     margin-left: 1rem;
 }
 
-#kontakt{
+#kontakt {
     margin-left: 1.70rem;
 }
 
-.nav-link{
+.nav-link {
     display: flex;
+    font-size: 1rem;
     align-items: center;
     height: 5rem;
     text-decoration: none;
@@ -158,60 +158,94 @@ body::-webkit-scrollbar-thumb:hover{
     transition: 200ms;
 }
 
-.nav-link:hover{
-filter: grayscale(0%) opacity(1);
-color: rgb(211, 211, 211);
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    color: rgb(211, 211, 211);
 }
 
-i{
+i {
     color: rgb(214, 214, 214);
 }
 
-.nav-link-text{
+.nav-link-text {
     display: none;
     color: rgb(214, 214, 214);
 }
 
-#nazov-hubenky{
-    font-family:  Beau Rivage;
+#nazov-hubenky {
+    font-family: Beau Rivage;
     font-size: 1.60rem;
     margin: 0.10rem;
 }
 
-body{
+body {
     color: black;
     background-color: white;
     margin: 0;
     padding: 0;
 }
 
-h1{
+h1 {
     color: var(--text-primary);
-    font-size: xx-large;
+    font-size: 3rem;
     text-align: center;
-    padding: 1rem;
+    padding: 0rem;
+    background-color: whitesmoke;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
 }
 
-p{
+p {
     color: var(--text-secondary);
     padding: 1rem;
 }
 
-main{
+main {
     margin-left: 6rem;
     padding: 0;
     text-align: left;
 }
 
-.navbar:hover{
+.navbar:hover {
     width: 11rem;
     align-items: left;
     position: fixed;
     left: 0;
 }
 
-.navbar:hover .nav-link-text{
+.navbar:hover .nav-link-text {
     display: block;
     align-items: center;
     flex-shrink: 0;
+}
+
+h2{
+    text-align: center;
+    padding-left: 2rem;
+    font-size: 1.75rem;
+}
+
+.podnadpis-info{
+    text-align: center;
+    padding-left: 2rem;
+    margin-top: -1.25rem;
+    color: var(--text-secondary);
+}
+
+.list-info{
+    font-size: 1.25rem;
+    margin-top: -1rem;
+    margin-bottom: -1.5rem;
+    padding-left: 2rem
+}
+
+.list-item{
+    font-size: 1.10rem;
+    margin-top: -1rem;
+    padding-left: 2rem;
+}
+
+.text-novinky{
+    margin-top: -1rem;
+    padding-left: 2rem;
 }
