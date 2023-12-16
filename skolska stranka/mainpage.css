@@ -1,10 +1,11 @@
-:root {
+:root{
     font-size: 16px;
     font-family: "Josefin Sans";
-    --text-primary: #131316;
-    --text-secondary: #343232;
-    --bg-primary: #343232;
-    --bg-secondary: #a0a0a0;
+    --text-primary: #000000;
+    --text-secondary: #ffffff;
+    --bg-primary: #2C3D6A;
+    --bg-secondary: #B7C3E1;
+    --bg-tertiary: #FCE4C5;
 }
 
 body::-webkit-scrollbar-track {
@@ -27,225 +28,114 @@ body::-webkit-scrollbar-thumb:hover {
     background: #e8e8e8;
 }
 
-.nadpis {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    min-width: 400px;
+body{
+    margin: 0;
+    padding: 0;
 }
-
-.novinky-dole {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    min-width: 400px;
-    background-color: #9ACCD5;
-}
-
-.novinky-hore {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    min-width: 400px;
-    background-color: whitesmoke;
-}
-
-.vlna-1 {
-    position: relative;
-    top: 0;
-    left: 0;
+.navbar{
     width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(0deg);
-    fill: whitesmoke;
-    background-color: #9ACCD5;
-}
-
-.vlna-1 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 90px;
-}
-
-.vlna-2 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-    fill: whitesmoke;
-    background-color: #9ACCD5;
-}
-
-.vlna-2 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 90px;
-}
-
-.navbar {
-    background-color: #202231;
-    width: 6rem;
-    height: 100vh;
+    height: 4rem;
+    background-color: #FCE4C5;
     position: fixed;
-    z-index: 2;
-    left: 0;
-    transition: 200ms ease;
+    top: 0;
 }
 
-.navigation {
-    list-style: none;
+.nav-list{
+    display: flex;
+    list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    max-height: 4rem;
     height: 100%;
+    position: fixed;
+    right: 0;
 }
 
-.nav-item {
-    width: 100%;
-    margin-left: 4rem;
-}
-
-.nav-item:last-child {
-    margin-left: 0rem;
-    text-align: center;
-    max-width: min-content;
-    margin-top: auto;
-}
-
-#hlavna-stranka {
-    margin-left: 0.20rem;
-}
-
-#ziaci-a-rodicia {
-    margin-left: 0.25rem;
-}
-
-#o-skole {
-    margin-left: 1.60rem;
-}
-
-#projekty {
-    margin-left: 1.90rem;
-}
-
-#zelena-skola {
-    margin-left: 1rem;
-}
-
-#kontakt {
-    margin-left: 1.70rem;
-}
-
-.nav-link {
+.nav-item{
     display: flex;
-    font-size: 1rem;
-    align-items: center;
-    height: 5rem;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    filter: grayscale(100%) opacity(0.6);
-    transition: 200ms;
-}
-
-.nav-link:hover {
-    filter: grayscale(0%) opacity(1);
-    color: rgb(211, 211, 211);
-}
-
-i {
-    color: rgb(214, 214, 214);
-}
-
-.nav-link-text {
-    display: none;
-    color: rgb(214, 214, 214);
+    margin-right: 4vW;
+    font-size: 0.75rem;
+    text-wrap: wrap;
 }
 
 #nazov-hubenky {
     font-family: Beau Rivage;
     font-size: 1.60rem;
-    margin: 0.10rem;
 }
 
-body {
-    color: black;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
+.nav-link{
+    text-decoration: none;
     color: var(--text-primary);
-    font-size: 3rem;
-    text-align: center;
-    padding: 0rem;
-    background-color: whitesmoke;
-    margin-top: 0rem;
-    margin-bottom: 0rem;
 }
 
-p {
-    color: var(--text-secondary);
-    padding: 1rem;
-}
-
-main {
-    margin-left: 6rem;
-    padding: 0;
-    text-align: left;
-}
-
-.navbar:hover {
-    width: 11rem;
-    align-items: left;
+.nav-item:first-child{
     position: fixed;
     left: 0;
-}
-
-.navbar:hover .nav-link-text {
-    display: block;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-h2{
+    width: min-content;
     text-align: center;
-    padding-left: 2rem;
-    font-size: 1.75rem;
 }
 
-.podnadpis-info{
-    text-align: center;
-    padding-left: 2rem;
-    margin-top: -1.25rem;
+.nav-item:last-child{
+    margin-right: 1rem;
+}
+
+.knihy-main-page{
+    position: relative;
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+}
+
+#knihy-main-parent{
+    position: absolute;
+    right: 0;
+    margin: 0;
+    padding: 0;  
+    width: 45%;
+    margin-top: 14vw;
+    margin-right: 2vw;
+}
+
+.nazov-main{
+    position: relative;
+    font-family: 'Beau Rivage';
+    font-size: 8vw;
+    width: min-content;
+    text-align: center; 
+}
+
+#nazov-main-parent{
+    position: absolute;
+    left: 0;
+    margin: 0;
+    padding: 0;  
+    margin-left: 10%;
+    margin-top: 3rem;
+}
+
+.text-pod-nazvom{
+    max-width: 30vw;
+    font-size: 1.5vw;
+    margin-top: -6vw;
+    line-height: 1.5;
+}
+
+.cudlik-o-skole{
+    font-size: 2vw;
+    width: 13vw;
+    height: 3.5vw;
+    border-radius: 4vw;
+    border: none;
+    background-color: var(--bg-primary);
+}
+
+.cudlik-nazov{
     color: var(--text-secondary);
+    text-decoration: none;
 }
 
-.list-info{
-    font-size: 1.25rem;
-    margin-top: -1rem;
-    margin-bottom: -1.5rem;
-    padding-left: 2rem
-}
-
-.list-item{
-    font-size: 1.10rem;
-    margin-top: -1rem;
-    padding-left: 2rem;
-}
-
-.text-novinky{
-    margin-top: -1rem;
-    padding-left: 2rem;
+.cudlik-o-skole:hover{
+    box-shadow: 0.5vw 0.5vw 5px rgb(179, 179, 179);
+    shadow: ;
 }
